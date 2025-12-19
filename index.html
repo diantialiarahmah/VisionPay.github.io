@@ -186,6 +186,23 @@ footer{
   color:#4A2C3A;
   letter-spacing:5px;
 }
+
+.cara-kerja-img {
+  display: block;        /* ⬅ bikin img jadi block */
+  margin: 0 auto;        /* ⬅ otomatis ke tengah */
+  width: 600px;          /* ukuran sedang */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.cara-kerja-text {
+  text-align: justify;   /* ⬅ paragraf tetap justify */
+  margin-top: 0;         /* ⬅ tidak ada jarak ke gambar */
+  font-size: 16px;
+  line-height: 1.8;
+}
+    
 </style>
 
 </head>
@@ -252,8 +269,15 @@ footer{
 <section id="Cara Kerja">
   <h2>Gimana Cara Kerja VisionPay? ⚙️</h2>
   <div class="cara-kerja-container">
-    <img src="Cara Kerja VisionPay.png" alt="Logo" style="width:15cm; height:8cm; object-fit:contain;">
-    <p>Pengguna menekan push button untuk memulai proses. Kamera ESP32-CAM mengambil gambar uang kertas yang diarahkan ke perangkat. Gambar diproses menggunakan algoritma pengenalan citra untuk mengidentifikasi nominal uang. Setelah nominal terdeteksi, sistem mengeluarkan suara melalui speaker yang menyebutkan nilai uang tersebut.</p>
+    <img src="Cara Kerja VisionPay.png" alt="Diagram Cara Kerja VisionPay" class="cara-kerja-img">
+    <p class="cara-kerja-text">
+      Pengguna menekan push button untuk memulai proses. Kamera ESP32-CAM
+      mengambil gambar uang kertas yang diarahkan ke perangkat. Gambar
+      diproses menggunakan algoritma pengenalan citra untuk mengidentifikasi
+      nominal uang. Setelah nominal terdeteksi, sistem mengeluarkan suara
+      melalui speaker yang menyebutkan nilai uang tersebut.
+    </p>
+  </div>
 </section>
 
   <footer>
