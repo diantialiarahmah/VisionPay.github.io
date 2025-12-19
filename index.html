@@ -4,94 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VISIONPAY</title>
-  <style>
-  body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#FFF0F5;
-    color:#333;
-    line-height:1.6
-  }
-  header{
-    background:#fb6f92;
-    color:#4a2c3a;
-    padding:30px 20px;
-    text-align:center
-  }
-  nav{
-    background:#FFB3C6;
-    padding:10px;
-    text-align:center;
-    position:sticky;
-    top:0
-  }
-  nav a{
-    color:#4a2c3a;
-    margin:0 10px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:14px
-  }
-  section{
-    padding:40px 20px;
-    max-width:1100px;
-    margin:auto
-  }
-  h2{
-    color:##FF6F91;
-    border-bottom:2px solid #ffffff;
-    padding-bottom:5px;
-    background:#FFC5D3;
-    border-radius:6px;
-    padding:10px;
-    text-shadow:0 2px 4px rgba(0,0,0,0.2)
-  }
-  h3{
-    margin-top:25px;
-    color:#FF6F91
-  }
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#FFF5F8;
+  color:#4A2C3A;
+  line-height:1.6
+}
 
-  .card{
-    background:#ffffff;
-    padding:25px;
-    margin-top:20px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,.08)
-  }
-  table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px
-  }
-  table,th,td{
-    border:1px solid #f3b4c3
-  }
-  th,td{
-    padding:10px;
-    text-align:left
-  }
-  th{
-    background:#FFE1EA;
-    color:#4a2c3a
-  }
-  ul{
-    padding-left:20px
-  }
-  pre{
-    background:#4a2c3a;
-    color:#ffeaf0;
-    padding:15px;
-    border-radius:8px;
-    overflow-x:auto
-  }
-  footer{
-    background:#fb6f92;
-    color:#4a2c3a;
-    text-align:center;
-    padding:15px;
-    margin-top:40px
-  }
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#FFC5D3,#FF9EB5);
+  color:#4A2C3A;
+  padding:40px 20px;
+  text-align:center
+}
+
+header h1{
+  margin:10px 0;
+}
+
+header p{
+  font-size:16px;
+}
+
+/* NAV */
+nav{
+  background:#FF9EB5;
+  padding:12px;
+  text-align:center;
+  position:sticky;
+  top:0
+}
+
+nav a{
+  color:#4A2C3A;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* SECTION */
+section{
+  padding:40px 20px;
+  max-width:1100px;
+  margin:auto
+}
+
+h2{
+  color:#4A2C3A;
+  background:#FFC5D3;
+  border-left:6px solid #FF6F91;
+  padding:10px 15px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+h3{
+  margin-top:25px;
+  color:#FF6F91
+}
+
+/* CARD */
+.card{
+  background:#ffffff;
+  padding:25px;
+  margin-top:20px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(255,111,145,.15)
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:15px
+}
+
+table,th,td{
+  border:1px solid #FFD6E0
+}
+
+th,td{
+  padding:12px;
+  text-align:left
+}
+
+th{
+  background:#FFE6EC;
+  color:#4A2C3A
+}
+
+ul{
+  padding-left:20px
+}
+
+/* CODE */
+pre{
+  background:#4A2C3A;
+  color:#FFE6EC;
+  padding:15px;
+  border-radius:10px;
+  overflow-x:auto
+}
+
+/* FOOTER */
+footer{
+  background:#FFC5D3;
+  color:#4A2C3A;
+  text-align:center;
+  padding:18px;
+  margin-top:40px
+}
 </style>
+
 </head>
 <body>
 
@@ -111,60 +143,51 @@
   <title>Tim Pengembang</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #fff1e6, #fff1e6);
-    }
-
-    .team-section {
-      padding: 60px 15px;
-    }
-
-    .team-box {
-      max-width: 700px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-      padding: 10px 20px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    }
-
-    .team-title {
-      text-align: center;
-      font-size: 30px;
-      margin-bottom: 10px;
-      color: #333;
-      font-weight: bold;
-    }
-
-   .member-card {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  padding: 25px 15px;
-  text-align: center;
-  margin-bottom: 15px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.team-section{
+  padding:60px 15px;
 }
 
-  .member-card h3 {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 600;
+.team-box{
+  max-width:700px;
+  margin:auto;
+  background:#FFC5D3;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 15px 30px rgba(255,111,145,.25);
 }
 
-  .member-card p {
-  margin: 0;
-  font-size: 18px;
-  color: #ff8fab;
-  letter-spacing: 1px;
+.team-title{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:25px;
+  color:#4A2C3A;
+  font-weight:bold;
 }
-  </style>
+
+.member-card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:22px 15px;
+  text-align:center;
+  margin-bottom:18px;
+  box-shadow:0 6px 15px rgba(255,111,145,.2);
+}
+
+.member-card h3{
+  margin:0 0 8px 0;
+  font-size:20px;
+  color:#FF6F91;
+  font-weight:600;
+}
+
+.member-card p{
+  margin:0;
+  font-size:16px;
+  color:#4A2C3A;
+  letter-spacing:1px;
+}
+</style>
+
 </head>
 
 <body>
