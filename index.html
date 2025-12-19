@@ -171,7 +171,6 @@ footer{
   text-align:center;
   margin-bottom:14px;
   box-shadow:0 5px 12px rgba(255,111,145,.18);
-  transition: all 0.35s cubic-bezier(.4,0,.2,1);
 }
 
 .member-card h3{
@@ -209,6 +208,35 @@ footer{
   box-shadow: 0 12px 22px rgba(255,111,145,.35);
 }
     
+.transition {
+  transition: all 0.35s cubic-bezier(.4,0,.2,1);
+  }
+
+.member-card h4,
+.member-card p{
+  transition: 
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* efek hover */
+.member-card:hover h4{
+  color: #e91e63; /* pink utama */
+  text-shadow:
+    0 0 4px rgba(233, 30, 99, 0.6),
+    0 0 8px rgba(233, 30, 99, 0.4),
+    0 0 14px rgba(233, 30, 99, 0.3);
+  transform: translateY(-3px);
+}
+
+.member-card:hover p{
+  color: #ad1457; /* pink lebih soft */
+  text-shadow:
+    0 0 3px rgba(233, 30, 99, 0.4),
+    0 0 6px rgba(233, 30, 99, 0.25);
+  transform: translateY(-2px);
+}
 </style>
 
 </head>
@@ -220,7 +248,7 @@ footer{
 
     <div class="team-title">Siapa di Balik VisionPay? 👀</div>
 
-    <div class="member-card member-card:hover">
+    <div class="member-card member-card:hover h4">
       <h3>👨‍💻 Dianti Alia Rahmah</h3>
       <p>122430107</p>
     </div>
@@ -246,7 +274,9 @@ footer{
 </nav>
   
   <section id="Visionpay">
+  <div class="transition">
   <h2>Kenalan yuk sama VisionPay! 👋</h2>
+  </div>
   <div class="card">
     <p>VisionPay adalah alat bantu berbasis teknologi yang secara otomatis direkam untuk mendeteksi nominal rupiah dan hasil deteksi, yang ditujukan untuk tunanetra. VisionPay menggunakan Modul CAM ESP32, mikrokontroler dengan kamera terintegrasi yang menggunakan algoritma pemrosesan gambar untuk mengidentifikasi penggunaan nominal.</p>
   </div>
@@ -276,7 +306,7 @@ footer{
   <h2>Gimana Cara Kerja VisionPay? ⚙️</h2>
   <div class="cara-kerja-container">
     <img src="Cara Kerja VisionPay.png" alt="Diagram Cara Kerja VisionPay" class="cara-kerja-img">
-    <p class="cara-kerja-text member-card">
+    <p class="cara-kerja-text member card">
       Pengguna menekan push button untuk memulai proses. Kamera ESP32-CAM
       mengambil gambar uang kertas yang diarahkan ke perangkat. Gambar
       diproses menggunakan algoritma pengenalan citra untuk mengidentifikasi
