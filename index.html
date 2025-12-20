@@ -127,15 +127,6 @@ footer{
 <body>
   
 <header class="hero-header">
-  
-  <span class="money"></span>
-  <span class="money money2"></span>
-  <span class="money money3"></span>
-  
-  <span class="bubble"></span>
-  <span class="bubble bubble2"></span>
-  <span class="bubble bubble3"></span>
-  
   <div class="hero-content">
     <img src="Logoo.png" alt="Logo" class="hero-logo">
     <h1>VisionPay - Pendeteksi Uang untuk Tunanetra</h1>
@@ -309,107 +300,6 @@ footer{
   object-fit:contain;
   display:block;
   margin:0 auto 20px;     /* 🔑 logo benar-benar center */
-}
-
-.hero-header{
-  position: relative;
-  height: 320px;
-  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* Konten utama */
-.hero-content{
-  position: relative;
-  z-index: 10;
-  color: #fff;
-}
-
-.hero-logo{
-  width: 110px;
-  margin-bottom: 14px;
-}
-
-/* 💸 Uang */
-.money{
-  position: absolute;
-  top: -40px;
-  width: 48px;
-  height: 28px;
-  background: rgba(255, 105, 180, 0.75);
-  border-radius: 6px;
-  animation: moneyFall 9s linear infinite;
-}
-
-.money::after{
-  content: "Rp";
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  left: 14px;
-  top: 4px;
-}
-
-.money2{
-  left: 25%;
-  animation-duration: 12s;
-}
-
-.money3{
-  left: 70%;
-  animation-duration: 10s;
-}
-
-/* 🫧 Bubble */
-.bubble{
-  position: absolute;
-  bottom: -50px;
-  width: 28px;
-  height: 28px;
-  background: rgba(255, 182, 193, 0.6);
-  border-radius: 50%;
-  animation: bubbleUp 8s linear infinite;
-}
-
-.bubble2{
-  left: 35%;
-  width: 38px;
-  height: 38px;
-  animation-duration: 11s;
-}
-
-.bubble3{
-  left: 60%;
-  width: 20px;
-  height: 20px;
-  animation-duration: 6s;
-}
-
-/* 🎞️ Animasi */
-@keyframes moneyFall{
-  0%{
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100%{
-    transform: translateY(380px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes bubbleUp{
-  0%{
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  100%{
-    transform: translateY(-360px);
-    opacity: 0;
-  }
 }
   
 </style>
