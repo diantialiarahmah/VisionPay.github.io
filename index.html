@@ -69,6 +69,11 @@ h3{
   color:#FF6F91
 }
 
+a{
+  color:inherit;        /* ikut warna teks */
+  text-decoration:none; /* hilangin garis bawah */
+}
+  
 /* CARD */
 .card{
   background:#ffffff;
@@ -311,6 +316,18 @@ footer{
   display:block;
   margin:0 auto 15px;
 }
+
+.link-drive{
+  color:#FF6F91;          /* pink pastel */
+  text-decoration:none;
+  font-weight:600;
+}
+
+.link-drive:hover{
+  color:#fb6f92;
+  text-decoration:underline;
+}
+
 </style>
 
 </head>
@@ -355,6 +372,7 @@ footer{
   <a href="#Pengujian">Pengujian</a>
   <a href="#Spesifikasi">Spesifikasi</a>
   <a href="#Design">Design</a>
+  <a href="#Repository">Repository</a>
   <a href="#Video">Video</a>
 </nav>
   
@@ -660,6 +678,18 @@ footer{
   </div>
 </section>
 
+  <section id="Repository">
+  <h2>📄 Dokumen VisionPay</h2>
+  <div class="card cara-kerja-text">
+  <a 
+    href="https://bit.ly/RepositoryPSB"
+    target="_blank"
+    class="link-drive">
+    📂 Buka Repository VisionPay
+  </a>
+  </div>
+</section>
+  
   <section id="Video">
   <h2>Video Demonstrasi VisionPay 🎥</h2>
   <div class="video-container">
@@ -669,18 +699,6 @@ footer{
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
-  </div>
-</section>
-
-<section id="drive">
-  <h2>📄 Dokumen VisionPay</h2>
-  <div class="card cara-kerja-text">
-  <a 
-    href="https://bit.ly/RepositoryPSB"
-    target="_blank"
-    class="btn-drive">
-    📂 Buka Dokumen VisionPay
-  </a>
   </div>
 </section>
   
