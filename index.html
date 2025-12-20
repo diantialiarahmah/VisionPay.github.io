@@ -312,6 +312,25 @@ footer{
   margin:0 auto 15px;
 }
 
+.drive-container{
+  position:relative;
+  padding-bottom:56.25%; /* rasio 16:9 */
+  height:0;
+  overflow:hidden;
+  border-radius:16px;
+  background:#ffffff;
+  box-shadow:0 10px 25px rgba(255,111,145,.2);
+  margin-top:20px;
+}
+
+.drive-container iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
 </style>
 
 </head>
@@ -669,6 +688,16 @@ footer{
       title="Video VisionPay"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section id="drive">
+  <h2>📄 Dokumen VisionPay</h2>
+  <div class="drive-container">
+    <iframe 
+      src="https://drive.google.com/file/d/144XE_FDIOwvqBx0a7Ep0DX9oKz0Eqsst/preview"
+      allow="autoplay">
     </iframe>
   </div>
 </section>
