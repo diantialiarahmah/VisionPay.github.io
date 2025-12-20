@@ -120,7 +120,17 @@ footer{
   padding:18px;
   margin-top:40px
 }
-</script>
+  
+ @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 
 </head>
@@ -301,7 +311,26 @@ footer{
   display:block;
   margin:0 auto 20px;     /* 🔑 logo benar-benar center */
 }
-  
+
+    /* Animasi */
+.fade-section h2 {
+  animation-delay: 0.1s;
+}
+
+.fade-card {
+  animation-delay: 0.3s;
+}
+
+    .fade-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 
 </head>
@@ -344,7 +373,7 @@ footer{
   <a href="#Video">Video</a>
 </nav>
   
-  <section id="Visionpay">
+  <section id="Visionpay" class="fade-scroll">
   <h2>Kenalan yuk sama VisionPay! 👋</h2>
   <div class="card cara-kerja-text">
     <p>VisionPay adalah alat bantu berbasis teknologi yang secara otomatis direkam untuk mendeteksi nominal rupiah dan hasil deteksi, yang ditujukan untuk tunanetra. VisionPay menggunakan Modul CAM ESP32, mikrokontroler dengan kamera terintegrasi yang menggunakan algoritma pemrosesan gambar untuk mengidentifikasi penggunaan nominal.</p>
@@ -662,6 +691,18 @@ footer{
   <p>© 2025 | VisionPay: Pendeteksi Uang Otomatis untuk Tunanetra | Perancangan Sistem Biomedis II</p>
 </footer>
 
+<script>
+const faders = document.querySelectorAll('.fade-scroll');
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+  
 <script>
 let slides = document.querySelectorAll(".slide");
 let index = 0;
