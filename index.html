@@ -123,7 +123,20 @@ footer{
   padding:18px;
   margin-top:40px
 }
+  
+<script>
+let index = 0;
+const slider = document.getElementById("slider");
+const dots = document.querySelectorAll(".dot");
 
+setInterval(() => {
+  index = (index + 1) % 2;
+  slider.style.transform = `translateX(-${index * 50}%)`;
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}, 4000);
+</script>
 </style>
 
 </head>
@@ -213,6 +226,52 @@ footer{
 .transition {
   transition: all 0.35s cubic-bezier(.4,0,.2,1);
   }
+
+    /* === SLIDER TENTANG === */
+.slider-wrapper{
+  position:relative;
+}
+
+.slider-container{
+  width:100%;
+  overflow:hidden;
+  border-radius:14px;
+  margin:15px 0;
+}
+
+.slider{
+  display:flex;
+  width:200%;
+  transition:transform 0.8s ease-in-out;
+}
+
+.slider img{
+  width:50%;
+  object-fit:cover;
+}
+
+/* DOT INDICATOR */
+.dots{
+  display:flex;
+  justify-content:center;
+  margin-top:10px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  background:#D8BCAA;
+  border-radius:50%;
+  margin:0 6px;
+  opacity:0.5;
+  transition:all 0.3s ease;
+}
+
+.dot.active{
+  background:#4B3B2A;
+  opacity:1;
+  transform:scale(1.2);
+}
 </style>
 
 </head>
@@ -250,7 +309,7 @@ footer{
   <a href="#Implementasi">Implementasi</a>
   <a href="#Pengujian">Pengujian</a>
   <a href="#Spesifikasi">Spesifikasi</a>
-  <a href="#3D Design VisionPay">3D Design VisionPay</a>
+  <a href="#3D Design">3D Design</a>
 </nav>
   
   <section id="Visionpay">
@@ -402,7 +461,7 @@ footer{
     <p>berikut merupakan gambar wiring hardware VisionPay:</p>
     <div class="cara-kerja-container">
     <img src="Wiring Hardware VisionPay.png" alt="Diagram Cara Kerja VisionPay" class="cara-kerja-img">
-    <p>berikut merupakan gambar wiring hardware VisionPay:</p>
+    <p>Berikut merupakan gambar wiring hardware VisionPay:</p>
       <table>
       <thead>
       <tr>
@@ -542,14 +601,35 @@ footer{
   </div>
 </section>
 
-<section id="3D Design VisionPay">
-  <h2>🎨 Design 3D VisionPay</h2>
-  <div class="cara-kerja-container">
-    <img src="3D Design VisionPay.png" alt="Diagram Cara Kerja VisionPay" class="cara-kerja-img">
-    <p class="cara-kerja-text member card">
-      Desain 3D VisionPay menampilkan perangkat berbentuk wearable yang dipasang menggunakan strap seperti jam tangan, sehingga mudah digunakan dan tidak mudah terjatuh saat pengoperasian. Bagian utama berbentuk kotak berfungsi sebagai housing komponen elektronik, sementara strap berperan sebagai penyangga agar perangkat tetap stabil di tangan pengguna.</p>
+<section id="Design">
+  <h2>🎨 Design VisionPay</h2>
+  <div class="slider-wrapper">
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <img src="3D Design VisionPay.png" alt="VisionPay 1">
+        <img src="Produk VisionPay.png" alt="VisionPay 2">
+      </div>
+    </div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+    </div>
   </div>
+  <p class="cara-kerja-text member card">
+  <p>esain 3D VisionPay menampilkan perangkat berbentuk wearable yang dipasang menggunakan strap seperti jam tangan, sehingga mudah digunakan dan tidak mudah terjatuh saat pengoperasian. Bagian utama berbentuk kotak berfungsi sebagai housing komponen elektronik, sementara strap berperan sebagai penyangga agar perangkat tetap stabil di tangan pengguna.</p>
 </section>
+
+  <section id="Video">
+  <h2>Video Demonstrasi VisionPay 🎥</h2>
+  <div class="card" style="text-align:center">
+    <video controls width="100%" style="max-width:800px;border-radius:12px;">
+      <source src="Monitoring Sistem.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+    <p style="margin-top:10px;font-size:14px;color:#555">
+      Video Monitoring Sistem
+    </p>
+  </div>
   
   <footer>
   <p>© 2025 | VisionPay: Pendeteksi Uang Otomatis untuk Tunanetra | Perancangan Sistem Biomedis II</p>
