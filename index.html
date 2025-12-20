@@ -248,7 +248,26 @@ button{
 
 .prev{ left:10px; }
 .next{ right:10px; }
-    
+
+    .video-container{
+  position:relative;
+  padding-bottom:56.25%; /* 16:9 */
+  height:0;
+  overflow:hidden;
+  max-width:800px;
+  margin:40px auto;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(255,111,145,.25);
+}
+
+.video-container iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
 </style>
 
 </head>
@@ -587,22 +606,22 @@ button{
         <img src="Produk VisionPay.png" class="slide">
     </div>
     </div>
-  </div>
   <p class="cara-kerja-text member card">
   <p>Desain 3D VisionPay menampilkan perangkat berbentuk wearable yang dipasang menggunakan strap seperti jam tangan, sehingga mudah digunakan dan tidak mudah terjatuh saat pengoperasian. Bagian utama berbentuk kotak berfungsi sebagai housing komponen elektronik, sementara strap berperan sebagai penyangga agar perangkat tetap stabil di tangan pengguna.</p>
+  </div>
 </section>
 
   <section id="Video">
   <h2>Video Demonstrasi VisionPay 🎥</h2>
-  <div class="card" style="text-align:center">
-    <video controls width="100%" style="max-width:800px;border-radius:12px;">
-      <source src="Monitoring Sistem.mp4" type="video/mp4">
-      Browser Anda tidak mendukung video.
-    </video>
-    <p style="margin-top:10px;font-size:14px;color:#555">
-      Video Monitoring Sistem
-    </p>
-  </div>
+  <div class="video-container">
+  <iframe 
+    src="https://youtu.be/vofjeJvRT9c?si=NxyrPFN8dAJ2bTKs"
+    title="Video VisionPay"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
   
   <footer>
   <p>© 2025 | VisionPay: Pendeteksi Uang Otomatis untuk Tunanetra | Perancangan Sistem Biomedis II</p>
