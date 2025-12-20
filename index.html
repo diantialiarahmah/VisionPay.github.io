@@ -19,6 +19,8 @@ header{
   color:#4A2C3A;
   padding:40px 20px;
   text-align:center
+  position:relative;
+  z-index:1000;
 }
 
 header h1{
@@ -36,6 +38,7 @@ nav{
   text-align:center;
   position:sticky;
   top:0
+  z-index:1000;
 }
 
 nav a{
@@ -136,7 +139,7 @@ footer{
     <p>Alat Pendeteksi Uang Otomatis untuk Tunanetra dengan ESP32-CAM</p>
   </div>
 </header>
-  
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -233,28 +236,18 @@ footer{
   .slide.active{
   display:block;
 }
-
-button{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:#FFC5D3;
-  border:none;
-  padding:10px 14px;
-  border-radius:50%;
-  cursor:pointer;
-  font-size:18px;
+    
+#Video{
+  padding:40px 20px;
+  margin-top:100px;
 }
-
-.prev{ left:10px; }
-.next{ right:10px; }
 
 .video-container{
   position:relative;
-  padding-bottom:56.25%; /* 16:9 */
+  padding-bottom:56.25%;
   height:0;
   max-width:800px;
-  margin:30px auto;
+  margin:auto;
   border-radius:18px;
   overflow:hidden;
   background:#000;
