@@ -255,27 +255,27 @@ footer{
   
   <section id="Visionpay">
   <h2>Kenalan yuk sama VisionPay! 👋</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <p>VisionPay adalah alat bantu berbasis teknologi yang secara otomatis direkam untuk mendeteksi nominal rupiah dan hasil deteksi, yang ditujukan untuk tunanetra. VisionPay menggunakan Modul CAM ESP32, mikrokontroler dengan kamera terintegrasi yang menggunakan algoritma pemrosesan gambar untuk mengidentifikasi penggunaan nominal.</p>
   </div>
 </section>
 
   <section id="Latar Belakang">
   <h2>Kenapa VisionPay Itu Penting? 🧠</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <p>Penyandang tunanetra masih menghadapi kesulitan dalam mengenali nominal uang kertas saat bertransaksi. Ketergantungan pada bantuan orang lain berpotensi menimbulkan ketidaknyamanan, kesalahan, bahkan risiko penipuan. Perkembangan teknologi embedded system dan computer vision membuka peluang untuk menciptakan alat bantu yang lebih mandiri, portabel, dan mudah digunakan. VisionPay hadir sebagai solusi teknologi asistif berbasis ESP32-CAM yang mampu mendeteksi nominal uang secara otomatis dan menyampaikannya dalam bentuk suara.</p>
   </div>
 </section>
 
   <section id="Tujuan">
   <h2>Tujuan di Balik VisionPay 💡</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <p>VisionPay bertujuan untuk membantu penyandang tunanetra mengenali nominal uang kertas rupiah secara mandiri melalui sistem pendeteksian visual dan output audio. Selain itu, alat ini dirancang untuk meningkatkan kemandirian, rasa aman, dan kepercayaan diri tunanetra dalam melakukan transaksi keuangan sehari-hari tanpa ketergantungan pada orang lain.</p>
 </section>
 
   <section id="Manfaat">
   <h2>Kenapa Harus VisionPay? 💙</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <p>VisionPay memberikan manfaat utama berupa kemudahan akses informasi nominal uang melalui suara. Alat ini bersifat portabel, mudah digunakan hanya dengan satu tombol, dan dapat beroperasi tanpa koneksi internet. Dengan demikian, VisionPay mendukung inklusi sosial dan finansial bagi tunanetra serta mengurangi risiko kesalahan transaksi.</p>
   </div>
 </section>
@@ -294,9 +294,106 @@ footer{
   </div>
 </section>
 
+<section id="Cara Kerja">
+<h2>Gimana Cara Kerja VisionPay? ⚙️</h2>
+  <div class="card cara-kerja-text">
+    <p>Di balik VisionPay, terdapat teknologi hardware dan software yang bekerja sama secara real-time. Mulai dari kamera sebagai mata sistem, AI sebagai otak pemrosesan, hingga speaker yang menyampaikan informasi dalam bentuk suara.</p>
+    <p><b>Hardware VisionPay</b></p>
+   <table>
+      <thead>
+      <tr>
+        <th>Komponen</th>
+        <th>Fungsi / Penjelasan</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Amplifier Audio Digital + Speaker</td>
+        <td>Menguatkan sinyal audio dari ESP32-CAM dan mengubahnya menjadi suara yang dapat didengar oleh pengguna.</td>
+      </tr>
+      <tr>
+        <td>Mikrokontroler ESP32-CAM</td>
+        <td>Unit utama sistem yang menangkap gambar uang, memproses pengenalan nominal, dan mengatur alur kerja VisionPay.</td>
+      </tr>
+      <tr>
+        <td>Push Button</td>
+        <td>Berfungsi sebagai saklar manual untuk memulai proses pengenalan uang.</td>
+      </tr>
+      <tr>
+        <td>Baterai Li-Po 3,7V + Charger Module</td>
+        <td>Menyediakan sumber daya portabel serta memungkinkan pengisian ulang baterai secara aman.</td>
+      </tr>
+      <tr>
+        <td>Boost Converter</td>
+        <td>Meningkatkan tegangan dari baterai 3,7V ke tegangan kerja yang dibutuhkan sistem (±5V).</td>
+      </tr>
+      <tr>
+        <td>Resistor</td>
+        <td>Mengatur dan membatasi aliran arus listrik pada rangkaian untuk mencegah kerusakan komponen.</td>
+      </tr>
+      <tr>
+        <td>Kabel Jumper</td>
+        <td>Menghubungkan antar komponen elektronik pada rangkaian secara fleksibel.</td>
+      </tr>
+      <tr>
+        <td>PCB</td>
+        <td>Media untuk menyusun dan menghubungkan seluruh komponen elektronik dalam satu sistem terpadu.</td>
+      </tr>
+      <tr>
+        <td>Solder</td>
+        <td>Bahan logam untuk menyambung komponen elektronik ke PCB secara permanen.</td>
+      </tr>
+      <tr>
+        <td>Timah</td>
+        <td>Material penyambung dalam proses penyolderan untuk memastikan koneksi listrik yang baik.</td>
+      </tr>
+      <tr>
+        <td>Pasta Solder</td>
+        <td>Membantu aliran panas saat proses penyolderan sehingga sambungan lebih kuat dan bersih.</td>
+      </tr>
+      <tr>
+        <td>SD Card</td>
+        <td>Media penyimpanan untuk file model pengenalan citra dan file suara output.</td>
+      </tr>
+      <tr>
+        <td>Box Komponen</td>
+        <td>Wadah pelindung untuk menempatkan seluruh rangkaian agar rapi, aman, dan mudah dibawa.</td>
+      </tr>
+      </tbody>
+    </table>
+    <p><b>Software VisionPay</b></p>
+    <table>
+      <thead>
+      <tr>
+        <th>Software</th>
+        <th>Fungsi</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Arduino IDE</td>
+        <td>
+        Digunakan untuk menulis, mengunggah, dan menguji program (sketch) pada
+        mikrokontroler ESP32-CAM agar sistem VisionPay dapat berjalan sesuai
+        fungsi yang dirancang.
+        </td>
+      </tr>
+      <tr>
+        <td>Tinkercad</td>
+        <td>
+        Digunakan untuk melakukan simulasi rangkaian elektronik guna membantu
+        perancangan dan pemahaman sistem sebelum perakitan perangkat keras.
+        </td>
+      </tr>
+      </tbody>
+     </table>
+  </div>
+</section>
+  
+  
 <section id="Implementasi">
   <h2>Bagaimana VisionPay Dikembangkan? 🛠️</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <p>Implementasi VisionPay dilakukan dengan merakit seluruh komponen elektronik pada PCB, meliputi ESP32-CAM, modul speaker, tombol kontrol, dan media penyimpanan microSD. Sistem diprogram menggunakan Arduino IDE untuk menjalankan proses pengambilan citra, pengenalan nominal uang, serta pemutaran audio.</p>
     <p>Tahap Perakitan VisionPay:</p>
     <p><b>1. Perakitan Perangkat Keras</b></p>
@@ -305,6 +402,85 @@ footer{
     <p>berikut merupakan gambar wiring hardware VisionPay:</p>
     <div class="cara-kerja-container">
     <img src="Wiring Hardware VisionPay.png" alt="Diagram Cara Kerja VisionPay" class="cara-kerja-img">
+    <p>berikut merupakan gambar wiring hardware VisionPay:</p>
+      <table>
+      <thead>
+      <tr>
+        <th>Komponen</th>
+        <th>Pin Komponen</th>
+        <th>Pin ESP32-CAM / Jalur</th>
+        <th>Fungsi</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Push Button</td>
+        <td>Terminal Output</td>
+        <td>GPIO 13</td>
+        <td>Pemicu (trigger) untuk memulai proses deteksi uang.</td>
+      </tr>
+      <tr>
+        <td>LED Pencahayaan</td>
+        <td>Anoda (via Resistor)</td>
+        <td>GPIO 12</td>
+        <td>Output PWM untuk mengatur intensitas cahaya bantuan kamera.</td>
+      </tr>
+      <tr>
+        <td>Rangkaian Pembagi Tegangan</td>
+        <td>Output Voltage Divider</td>
+        <td>GPIO 34</td>
+        <td>Monitoring level tegangan baterai melalui ADC internal.</td>
+      </tr>
+      <tr>
+        <td>Modul PAM8403</td>
+        <td>VCC</td>
+        <td>Jalur 5V</td>
+        <td>Suplai daya stabil dari Boost Converter untuk amplifier.</td>
+      </tr>
+      <tr>
+        <td>Modul PAM8403</td>
+        <td>L / R Input</td>
+        <td>Pin DAC (Internal)</td>
+        <td>Menerima sinyal audio dari file MP3 yang dibaca ESP32.</td>
+      </tr>
+      <tr>
+        <td>Speaker Mini 8Ω</td>
+        <td>Terminal + / -</td>
+        <td>Output PAM8403</td>
+        <td>Output suara untuk menyampaikan nominal uang ke pengguna.</td>
+      </tr>
+      <tr>
+        <td>Baterai Li-Po 3.7V</td>
+        <td>Terminal + / -</td>
+        <td>Modul TP4056 (B+ / B-)</td>
+        <td>Sumber daya utama portabel.</td>
+      </tr>
+      <tr>
+        <td>Modul TP4056</td>
+        <td>Output + / -</td>
+        <td>Input Boost Converter</td>
+        <td>Modul pengisian daya dengan fitur proteksi baterai.</td>
+      </tr>
+      <tr>
+        <td>Boost Converter</td>
+        <td>Output 5V</td>
+        <td>ESP32-CAM (5V) & PAM8403</td>
+        <td>Menaikkan tegangan 3.7V menjadi 5V stabil untuk sistem.</td>
+      </tr>
+      <tr>
+        <td>MicroSD Card</td>
+        <td>Konektor Slot</td>
+        <td>Jalur SD_MMC</td>
+        <td>Menyimpan file audio MP3 dan model AI (TFLite).</td>
+      </tr>
+      <tr>
+        <td>Semua Komponen</td>
+        <td>GND</td>
+        <td>Common GND</td>
+        <td>Menjaga kestabilan sinyal dengan jalur ground yang sama.</td>
+    </tr>
+  </tbody>
+</table>
       <p><b>3. Sistem Audio</b></p>
       <p>ESP32-CAM memutar file audio MP3 dari microSD card yang diperkuat oleh modul PAM8403 dan dikeluarkan melalui speaker. Audio ini menjadi media utama penyampaian informasi nominal uang kepada pengguna.</p>
       <p><b>4. Sistem Catu Daya</b></p>
@@ -317,7 +493,7 @@ footer{
   
  <section id="Pengujian">
   <h2>Bagaimana Performa VisionPay? 🤨</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <p>VisionPay dilakukan pengujian untuk memastikan seluruh fungsi VisionPay berjalan dengan baik dan sesuai tujuan. Tahapan pengujian meliputi:</p>
    <ul>
     <li>Pengujian fungsi tombol dan kamera</li>
@@ -331,7 +507,7 @@ footer{
 
   <section id="Spesifikasi">
   <h2>Spesifikasi VisionPay</h2>
-  <div class="card">
+  <div class="card cara-kerja-text">
     <table>
       <tr><th>Parameter</th><th>Spesifikasi</th></tr>
       <tr><td>Material VisionPay</td><td>Casing ABS yang ringan dan ergonomis dengan strap sebagai penghubung</td></tr>
