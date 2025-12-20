@@ -123,25 +123,23 @@ footer{
   padding:18px;
   margin-top:40px
 }
-  
-<script>
-let index = 0;
-const slider = document.getElementById("slider");
-const dots = document.querySelectorAll(".dot");
-
-setInterval(() => {
-  index = (index + 1) % 2;
-  slider.style.transform = `translateX(-${index * 50}%)`;
-
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[index].classList.add("active");
-}, 4000);
 </script>
 </style>
 
 </head>
 <body>
 
+ <script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3000); // ganti tiap 3 detik
+</script> 
+  
 <header class="hero-header">
   <div class="hero-content">
     <img src="Logoo.png" alt="Logo" style="width:8cm; height:3cm; object-fit:contain;">
@@ -226,51 +224,20 @@ setInterval(() => {
 .transition {
   transition: all 0.35s cubic-bezier(.4,0,.2,1);
   }
-
-    /* === SLIDER TENTANG === */
-.slider-wrapper{
+.slider{
+  max-width:600px;
+  margin:40px auto;
   position:relative;
 }
 
-.slider-container{
+.slide{
   width:100%;
-  overflow:hidden;
-  border-radius:14px;
-  margin:15px 0;
+  border-radius:16px;
+  display:none;
 }
 
-.slider{
-  display:flex;
-  width:200%;
-  transition:transform 0.8s ease-in-out;
-}
-
-.slider img{
-  width:50%;
-  object-fit:cover;
-}
-
-/* DOT INDICATOR */
-.dots{
-  display:flex;
-  justify-content:center;
-  margin-top:10px;
-}
-
-.dot{
-  width:10px;
-  height:10px;
-  background:#D8BCAA;
-  border-radius:50%;
-  margin:0 6px;
-  opacity:0.5;
-  transition:all 0.3s ease;
-}
-
-.dot.active{
-  background:#4B3B2A;
-  opacity:1;
-  transform:scale(1.2);
+.slide.active{
+  display:block;
 }
 </style>
 
@@ -605,9 +572,9 @@ setInterval(() => {
   <h2>🎨 Design VisionPay</h2>
   <div class="slider-wrapper">
     <div class="slider-container">
-      <div class="slider" id="slider">
-        <img src="3D Design VisionPay.png" alt="VisionPay 1">
-        <img src="Produk VisionPay.png" alt="VisionPay 2">
+      <div class="slider">
+        <img src="3D Design VisionPay.png" class="slide active">
+        <img src="Produk VisionPay.png" class="slide">
       </div>
     </div>
     <div class="dots">
@@ -616,7 +583,7 @@ setInterval(() => {
     </div>
   </div>
   <p class="cara-kerja-text member card">
-  <p>esain 3D VisionPay menampilkan perangkat berbentuk wearable yang dipasang menggunakan strap seperti jam tangan, sehingga mudah digunakan dan tidak mudah terjatuh saat pengoperasian. Bagian utama berbentuk kotak berfungsi sebagai housing komponen elektronik, sementara strap berperan sebagai penyangga agar perangkat tetap stabil di tangan pengguna.</p>
+  <p>Desain 3D VisionPay menampilkan perangkat berbentuk wearable yang dipasang menggunakan strap seperti jam tangan, sehingga mudah digunakan dan tidak mudah terjatuh saat pengoperasian. Bagian utama berbentuk kotak berfungsi sebagai housing komponen elektronik, sementara strap berperan sebagai penyangga agar perangkat tetap stabil di tangan pengguna.</p>
 </section>
 
   <section id="Video">
